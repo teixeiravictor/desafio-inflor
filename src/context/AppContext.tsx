@@ -115,7 +115,7 @@ export function AppProvider({ children }: AppProviderProps) {
     const data = await response.json()
     collection = [...collection, ...data.results] as any
 
-    if (data.next !== null) getStarShipsData(data.next, collection)
+    if (data.next !== null) getStarShipsData(data.next.replace('http://', 'https://'), collection)
     if (data.next === null) setStarshipData(collection)
   }
 
