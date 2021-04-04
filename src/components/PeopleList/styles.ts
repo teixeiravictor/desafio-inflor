@@ -33,8 +33,8 @@ export const Icon = styled.div`
   width: 4rem;
 
   ${media.lessThan('medium')`
-      width: 1rem;
-    `}
+      width: 5rem;
+  `}
 
   svg {
     fill: var(--texts);
