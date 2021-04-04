@@ -44,10 +44,10 @@ const PeopleItem = (props: PeopleItemProps) => {
   }
 
   async function searchImage(query: string) {
-    const URL = `https://thingproxy.freeboard.io/fetch/https://api.qwant.com/api/search/images?count=1&q=${query}&t=images&safesearch=1&locale=pt_BR&uiv=4`
+    const URL = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.qwant.com/api/search/images?count=1&q=${query}&t=images&safesearch=1&locale=pt_BR&uiv=4`)}`
     const response = await fetch(URL, { cache: 'force-cache' })
     const results = await response.json()
-    const imageUrl = results.data.result.items.map(
+    const imageUrl = JSON.parse(results.contents).data.result.items.map(
       (item: any) => item.thumbnail
     )
 
@@ -55,7 +55,7 @@ const PeopleItem = (props: PeopleItemProps) => {
   }
 
   useEffect(() => {
-    searchImage(`${name.replace(/\s+/g, '')}`).catch(console.error)
+    searchImage(`${name}`).catch(console.error)
   }, [])
 
   return (
