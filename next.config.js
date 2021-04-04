@@ -4,31 +4,13 @@ const withReactSvg = require('next-react-svg')
 const path = require('path')
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = {
-  webpack: (config) => {
-    config.plugins = config.plugins || []
-
-    config.plugins = [
-      ...config.plugins,
-
-      // Read the .env file
-      new Dotenv({
-        path: path.join(__dirname, '.env.local'),
-        systemvars: true
-      })
-    ]
-
-    return config
-  }
-}
-
 module.exports = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
   },
   future: {
-    webpack5: true
+    webpack5: false
   }
 })
 
