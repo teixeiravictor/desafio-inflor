@@ -1,0 +1,67 @@
+{
+  "name": "desafio-inflor",
+  "version": "1.0.0",
+  "description": "Desafio técnico Inflor",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings=5",
+    "test": "jest",
+    "test:watch": "yarn test --watch"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/teixeiravictor/desafio-inflor.git)"
+  },
+  "keywords": [
+    "Inflor",
+    "React",
+    "Swapi"
+  ],
+  "author": "Victor Menezes <victormenezes8990@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "10.1.1",
+    "next-pwa": "^5.0.6",
+    "next-react-svg": "^1.1.2",
+    "next-seo": "^4.23.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "5.2.1",
+    "styled-icons": "^10.31.0",
+    "styled-media-query": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "dotenv-webpack": "^1.8.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26.6.3",
+    "jest-styled-components": "^7.0.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  }
+}
