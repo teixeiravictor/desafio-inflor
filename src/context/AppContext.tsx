@@ -121,7 +121,7 @@ export function AppProvider({ children }: AppProviderProps) {
 
   useEffect(() => {
     getPeopleData('page', 1)
-    getStarShipsData('https://swapi.dev/api/starships')
+    getStarShipsData('https://swapi.dev/api/starships/')
   }, [])
 
   return (
