@@ -1,3 +1,4 @@
+import Main from 'components/Main'
 import { NextSeo } from 'next-seo'
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
           site_name: 'Star Wars Explained'
         }}
       />
-      <h1>Maybe the Force be with you!</h1>
+      <Main />
     </>
   )
 }
