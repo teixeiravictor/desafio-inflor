@@ -25,7 +25,7 @@ node -v
 
 Utilize o gerenciador de pacotes [npm](https://www.npmjs.com/get-npm) para instalar as dependências do projeto.
 
-Caso prefira utilizar o [yarn](https://classic.yarnpkg.com/en/docs/install/) , fique a vontade!
+Caso prefira utilizar o [yarn](https://classic.yarnpkg.com/en/docs/install/) , fique à vontade!
 
 ```bash
 npm install
@@ -72,11 +72,11 @@ Foi usado a seguinte stack:
 
 https://desafio-inflor.vercel.app/
 
-Aplicação está com problemas de CORS quando hospedada na Vercel. Tentei resolver inserindo CORS proxy, mas não obtive sucesso. Idem para consumo do endpoint /api/starships/.
+Obs.: Aplicação está com problemas de CORS quando hospedada na Vercel.
 
 ## TODO ✓
 
-- [ ] Escrever testes usando Jest
+- [ ] Escrever os testes usando Jest
 - [ ] Adicionar husky.js para git hooks
 - [ ] Consumir a Custom Search API do Google para imagens
 
