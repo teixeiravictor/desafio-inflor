@@ -2,14 +2,19 @@ import { useContext, useState } from 'react'
 import { AppContext } from 'context/AppContext'
 
 import PeopleItem from 'components/PeopleItem'
+import Pagination from 'components/Pagination'
 
 import DarthVader from 'assets/svg/icon-darth-vader.svg'
 
 import * as S from './styles'
 
 const PeopleList = () => {
+  const [peoplesPerPage] = useState(10)
 
-  const { peoples, loading } = useContext(AppContext)
+  const { peoples, loading, totalPeople } = useContext(AppContext)
+  const { handleCurrentPage } = useContext(AppContext)
+
+  const paginate = (pageNumber: number) => handleCurrentPage(pageNumber)
 
   if (loading) {
     return <S.Spinner />
@@ -36,6 +41,11 @@ const PeopleList = () => {
               )
             })}
           </S.PeopleList>
+          <Pagination
+            peoplesPerPage={peoplesPerPage}
+            totalPeoples={totalPeople}
+            paginate={paginate}
+          />
         </>
       ) : (
         <S.MessageWrapper>
